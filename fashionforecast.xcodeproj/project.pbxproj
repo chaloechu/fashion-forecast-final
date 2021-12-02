@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD92EF593DB5C9CDC49A6BE9 /* Pods_fashionforecast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8E42901E94205E7F2FC7BE /* Pods_fashionforecast.framework */; };
+		EC76A2A22746046000EB0279 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76A2A12746046000EB0279 /* AppDelegate.swift */; };
+		EC76A2A42746046000EB0279 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76A2A32746046000EB0279 /* SceneDelegate.swift */; };
+		EC76A2A62746046000EB0279 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76A2A52746046000EB0279 /* ViewController.swift */; };
+		EC76A2AB2746046500EB0279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC76A2AA2746046500EB0279 /* Assets.xcassets */; };
+		EC76A2AE2746046500EB0279 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC76A2AC2746046500EB0279 /* LaunchScreen.storyboard */; };
+		EC76A2B6274607D000EB0279 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76A2B5274607D000EB0279 /* WeatherViewController.swift */; };
+		EC76A2B8274607E700EB0279 /* ClosetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76A2B7274607E700EB0279 /* ClosetViewController.swift */; };
+		EC76A2BA2746086800EB0279 /* OutfitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76A2B92746086800EB0279 /* OutfitViewController.swift */; };
+		EC76A2BC274621C200EB0279 /* Clothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76A2BB274621C200EB0279 /* Clothing.swift */; };
+		EC76A2BE274623CA00EB0279 /* ClothingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76A2BD274623CA00EB0279 /* ClothingCollectionViewCell.swift */; };
+		EC76A2C0274B081D00EB0279 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76A2BF274B081D00EB0279 /* Forecast.swift */; };
+		EC76A2C2274B0C6400EB0279 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76A2C1274B0C6400EB0279 /* ForecastTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		032154FB6D76BB75B8F28A25 /* Pods-fashionforecast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionforecast.debug.xcconfig"; path = "Target Support Files/Pods-fashionforecast/Pods-fashionforecast.debug.xcconfig"; sourceTree = "<group>"; };
+		793B2FA12453D4F766346109 /* Pods-fashionforecast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionforecast.release.xcconfig"; path = "Target Support Files/Pods-fashionforecast/Pods-fashionforecast.release.xcconfig"; sourceTree = "<group>"; };
+		EC76A29E2746046000EB0279 /* fashionforecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fashionforecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC76A2A12746046000EB0279 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC76A2A32746046000EB0279 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EC76A2A52746046000EB0279 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC76A2AA2746046500EB0279 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC76A2AD2746046500EB0279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC76A2AF2746046500EB0279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC76A2B5274607D000EB0279 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		EC76A2B7274607E700EB0279 /* ClosetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetViewController.swift; sourceTree = "<group>"; };
+		EC76A2B92746086800EB0279 /* OutfitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitViewController.swift; sourceTree = "<group>"; };
+		EC76A2BB274621C200EB0279 /* Clothing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clothing.swift; sourceTree = "<group>"; };
+		EC76A2BD274623CA00EB0279 /* ClothingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingCollectionViewCell.swift; sourceTree = "<group>"; };
+		EC76A2BF274B081D00EB0279 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		EC76A2C1274B0C6400EB0279 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
+		FA8E42901E94205E7F2FC7BE /* Pods_fashionforecast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fashionforecast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC76A29B2746046000EB0279 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD92EF593DB5C9CDC49A6BE9 /* Pods_fashionforecast.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96C40F398A88E244CEAE6AF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA8E42901E94205E7F2FC7BE /* Pods_fashionforecast.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A96777A8F268F436BC4C70A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				032154FB6D76BB75B8F28A25 /* Pods-fashionforecast.debug.xcconfig */,
+				793B2FA12453D4F766346109 /* Pods-fashionforecast.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EC76A2952746046000EB0279 = {
+			isa = PBXGroup;
+			children = (
+				EC76A2A02746046000EB0279 /* fashionforecast */,
+				EC76A29F2746046000EB0279 /* Products */,
+				A96777A8F268F436BC4C70A4 /* Pods */,
+				96C40F398A88E244CEAE6AF9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC76A29F2746046000EB0279 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC76A29E2746046000EB0279 /* fashionforecast.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC76A2A02746046000EB0279 /* fashionforecast */ = {
+			isa = PBXGroup;
+			children = (
+				EC76A2A12746046000EB0279 /* AppDelegate.swift */,
+				EC76A2A32746046000EB0279 /* SceneDelegate.swift */,
+				EC76A2A52746046000EB0279 /* ViewController.swift */,
+				EC76A2AA2746046500EB0279 /* Assets.xcassets */,
+				EC76A2AC2746046500EB0279 /* LaunchScreen.storyboard */,
+				EC76A2AF2746046500EB0279 /* Info.plist */,
+				EC76A2B5274607D000EB0279 /* WeatherViewController.swift */,
+				EC76A2B7274607E700EB0279 /* ClosetViewController.swift */,
+				EC76A2B92746086800EB0279 /* OutfitViewController.swift */,
+				EC76A2BB274621C200EB0279 /* Clothing.swift */,
+				EC76A2BD274623CA00EB0279 /* ClothingCollectionViewCell.swift */,
+				EC76A2BF274B081D00EB0279 /* Forecast.swift */,
+				EC76A2C1274B0C6400EB0279 /* ForecastTableViewCell.swift */,
+			);
+			path = fashionforecast;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC76A29D2746046000EB0279 /* fashionforecast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC76A2B22746046500EB0279 /* Build configuration list for PBXNativeTarget "fashionforecast" */;
+			buildPhases = (
+				642EACBB1A81ED49A5BABFF4 /* [CP] Check Pods Manifest.lock */,
+				EC76A29A2746046000EB0279 /* Sources */,
+				EC76A29B2746046000EB0279 /* Frameworks */,
+				EC76A29C2746046000EB0279 /* Resources */,
+				436BD2A5574A330C6FD064AB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fashionforecast;
+			productName = fashionforecast;
+			productReference = EC76A29E2746046000EB0279 /* fashionforecast.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC76A2962746046000EB0279 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					EC76A29D2746046000EB0279 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = EC76A2992746046000EB0279 /* Build configuration list for PBXProject "fashionforecast" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC76A2952746046000EB0279;
+			productRefGroup = EC76A29F2746046000EB0279 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC76A29D2746046000EB0279 /* fashionforecast */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC76A29C2746046000EB0279 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC76A2AE2746046500EB0279 /* LaunchScreen.storyboard in Resources */,
+				EC76A2AB2746046500EB0279 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		436BD2A5574A330C6FD064AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fashionforecast/Pods-fashionforecast-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fashionforecast/Pods-fashionforecast-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fashionforecast/Pods-fashionforecast-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		642EACBB1A81ED49A5BABFF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fashionforecast-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC76A29A2746046000EB0279 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC76A2A62746046000EB0279 /* ViewController.swift in Sources */,
+				EC76A2BC274621C200EB0279 /* Clothing.swift in Sources */,
+				EC76A2BA2746086800EB0279 /* OutfitViewController.swift in Sources */,
+				EC76A2B8274607E700EB0279 /* ClosetViewController.swift in Sources */,
+				EC76A2C0274B081D00EB0279 /* Forecast.swift in Sources */,
+				EC76A2BE274623CA00EB0279 /* ClothingCollectionViewCell.swift in Sources */,
+				EC76A2C2274B0C6400EB0279 /* ForecastTableViewCell.swift in Sources */,
+				EC76A2B6274607D000EB0279 /* WeatherViewController.swift in Sources */,
+				EC76A2A22746046000EB0279 /* AppDelegate.swift in Sources */,
+				EC76A2A42746046000EB0279 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC76A2AC2746046500EB0279 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC76A2AD2746046500EB0279 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC76A2B02746046500EB0279 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC76A2B12746046500EB0279 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC76A2B32746046500EB0279 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 032154FB6D76BB75B8F28A25 /* Pods-fashionforecast.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = fashionforecast/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cac466.fashionforecast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC76A2B42746046500EB0279 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 793B2FA12453D4F766346109 /* Pods-fashionforecast.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = fashionforecast/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cac466.fashionforecast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC76A2992746046000EB0279 /* Build configuration list for PBXProject "fashionforecast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC76A2B02746046500EB0279 /* Debug */,
+				EC76A2B12746046500EB0279 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC76A2B22746046500EB0279 /* Build configuration list for PBXNativeTarget "fashionforecast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC76A2B32746046500EB0279 /* Debug */,
+				EC76A2B42746046500EB0279 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC76A2962746046000EB0279 /* Project object */;
+}

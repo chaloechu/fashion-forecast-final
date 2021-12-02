@@ -1,0 +1,6 @@
+framework module Pods_fashionforecast {
+  umbrella header "Pods-fashionforecast-umbrella.h"
+
+  export *
+  module * { export * }
+}
