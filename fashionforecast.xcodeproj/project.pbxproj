@@ -20,6 +20,7 @@
 		EC76A2BE274623CA00EB0279 /* ClothingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76A2BD274623CA00EB0279 /* ClothingCollectionViewCell.swift */; };
 		EC76A2C0274B081D00EB0279 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76A2BF274B081D00EB0279 /* Forecast.swift */; };
 		EC76A2C2274B0C6400EB0279 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76A2C1274B0C6400EB0279 /* ForecastTableViewCell.swift */; };
+		EC7AE9F5275991DD00824268 /* OutfitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7AE9F4275991DD00824268 /* OutfitCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		EC76A2BD274623CA00EB0279 /* ClothingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingCollectionViewCell.swift; sourceTree = "<group>"; };
 		EC76A2BF274B081D00EB0279 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		EC76A2C1274B0C6400EB0279 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
+		EC7AE9F4275991DD00824268 /* OutfitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA8E42901E94205E7F2FC7BE /* Pods_fashionforecast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fashionforecast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 				EC76A2B5274607D000EB0279 /* WeatherViewController.swift */,
 				EC76A2B7274607E700EB0279 /* ClosetViewController.swift */,
 				EC76A2B92746086800EB0279 /* OutfitViewController.swift */,
+				EC7AE9F4275991DD00824268 /* OutfitCollectionViewCell.swift */,
 				EC76A2BB274621C200EB0279 /* Clothing.swift */,
 				EC76A2BD274623CA00EB0279 /* ClothingCollectionViewCell.swift */,
 				EC76A2BF274B081D00EB0279 /* Forecast.swift */,
@@ -231,6 +234,7 @@
 				EC76A2BE274623CA00EB0279 /* ClothingCollectionViewCell.swift in Sources */,
 				EC76A2C2274B0C6400EB0279 /* ForecastTableViewCell.swift in Sources */,
 				EC76A2B6274607D000EB0279 /* WeatherViewController.swift in Sources */,
+				EC7AE9F5275991DD00824268 /* OutfitCollectionViewCell.swift in Sources */,
 				EC76A2A22746046000EB0279 /* AppDelegate.swift in Sources */,
 				EC76A2A42746046000EB0279 /* SceneDelegate.swift in Sources */,
 			);
