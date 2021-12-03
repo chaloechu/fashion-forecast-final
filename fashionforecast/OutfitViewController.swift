@@ -11,6 +11,8 @@ class OutfitViewController: UIViewController{
     private var viewLabel = UILabel()
     private var clothing: [[Clothing]] = []
     private var outfit: [Clothing] = []
+    private var clicks = 0;
+    private var easterEggLabel = UILabel()
     
     private var collectionView: UICollectionView!
     
@@ -66,19 +68,21 @@ class OutfitViewController: UIViewController{
         refreshButton.addTarget(self, action: #selector(refreshData), for: .touchUpInside)
         view.addSubview(refreshButton)
         
+        easterEggLabel.font = .systemFont(ofSize: 20, weight: .bold)
+        easterEggLabel.textColor = .clear
+        easterEggLabel.translatesAutoresizingMaskIntoConstraints = false
+        easterEggLabel.text = "PICK YOUR OWN CLOTHES...please"
+        view.addSubview(easterEggLabel)
+        
         setUpConstraints()
     }
     
     func createDummyData(){
-        let longSleeveShirt = Clothing(imageName: "tops", type: "Tops", description: "Long Sleeve Shirt", season: "Winter")
-        let shortSleeveShirt = Clothing(imageName: "tops", type: "Tops", description: "Short Sleeve Shirt", season: "Summer")
-        let slacks = Clothing(imageName: "bottoms", type: "Bottoms", description: "Long Slacks", season: "Fall")
-        let skirt = Clothing(imageName: "bottoms", type: "Bottoms", description: "Skirt", season: "Spring")
-        let vest = Clothing(imageName: "jackets", type: "Jackets", description: "black vest", season: "Fall")
-        let raincoat = Clothing(imageName: "jackets", type: "Jackets", description: "yellow raincoat", season: "Spring")
-        let sneakers = Clothing(imageName: "shoes", type: "Shoes", description: "white sneakers", season: "Any")
-        let dressShoes = Clothing(imageName: "shoes", type: "Shoes", description: "black dress shoes", season: "Any")
-        clothing = [[longSleeveShirt, shortSleeveShirt], [slacks, skirt], [vest, raincoat], [sneakers, dressShoes]]
+        clothing = [[Clothing(imageName: "short sleeve top", type: "tops", description: "tops", season: "summer"), Clothing(imageName: "sweater", type: "tops", description: "sweater", season: "winter")],
+        [Clothing(imageName: "jeans", type: "bottoms", description: "jeans", season: "spring"), Clothing(imageName: "skirt", type: "bottoms", description: "skirt", season: "summer")],
+        [Clothing(imageName: "denim jacket", type: "jackets", description: "denim jacket", season: "spring"),
+        Clothing(imageName: "puffer jacket", type: "jackets", description: "puffer jacket", season: "fall")],
+        [Clothing(imageName: "sneakers", type: "shoes", description: "sneakers", season: "summer"), Clothing(imageName: "sandals", type: "shoes", description: "sandals", season: "summer")]]
     }
     
     
@@ -100,6 +104,10 @@ class OutfitViewController: UIViewController{
             refreshButton.leadingAnchor.constraint(equalTo: viewLabel.leadingAnchor),
             refreshButton.trailingAnchor.constraint(equalTo: viewLabel.trailingAnchor)
         ])
+        NSLayoutConstraint.activate([
+            easterEggLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            easterEggLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
     }
     
     func chooseClothing(){
@@ -110,9 +118,21 @@ class OutfitViewController: UIViewController{
     }
     
     @objc func refreshData(){
-        outfit = []
-        chooseClothing()
-        collectionView.reloadData()
+        if(clicks == 10){
+            collectionView.isHidden = true
+            easterEggLabel.textColor = .black
+        }else if(clicks == 20){
+            collectionView.isHidden = true
+            easterEggLabel.textColor = .black
+            easterEggLabel.text = "THIS CAN'T BE THAT HELPFUL"
+        }else{
+            easterEggLabel.textColor = .clear
+            collectionView.isHidden = false
+            outfit = []
+            chooseClothing()
+            collectionView.reloadData()
+        }
+        clicks = clicks + 1
     }
 }
 
