@@ -12,98 +12,105 @@ class ClosetViewController: UIViewController{
     
     private var clothingCollectionView: UICollectionView!
     
-    private var clothing: [[Clothing]] = []
     private var sections = ["Tops", "Bottoms", "Jackets", "Shoes"]
     
-    private var clothingCellReuseIdentifier = "clothingCellReuseIdentifier"
+    private var clothingItems : [[Clothing]] = [
+        [Clothing(imageName: "short sleeve top", type: "tops", description: "tops", season: "summer"), Clothing(imageName: "sweater", type: "tops", description: "sweater", season: "winter")],
+        [Clothing(imageName: "jeans", type: "bottoms", description: "jeans", season: "spring"), Clothing(imageName: "skirt", type: "bottoms", description: "skirt", season: "summer")],
+        [Clothing(imageName: "denim jacket", type: "jackets", description: "denim jacket", season: "spring"),
+        Clothing(imageName: "puffer jacket", type: "jackets", description: "puffer jacket", season: "fall")],
+        [Clothing(imageName: "sneakers", type: "shoes", description: "sandals", season: "summer"), Clothing(imageName: "sandals", type: "shoes", description: "sneakers", season: "summer")]
+    ]
+    
+    // set up constants
+    private let clothingCellReuseIdentifier = "clothingCellReuseIdentifier"
+    private let headerReuseIdentifier = "headerReuseIdentifier"
     private let cellPadding: CGFloat = 10
     private let sectionPadding: CGFloat = 5
     
-    private var viewLabel = UILabel()
-    
-    init(){
-        super.init(nibName: nil, bundle: nil)
-//        createDummyData()
-    }
-    
-    func createDummyData(){
-        let longSleeveShirt = Clothing(imageName: "tops", type: "Tops", description: "Long Sleeve Shirt", season: "Winter")
-        let shortSleeveShirt = Clothing(imageName: "tops", type: "Tops", description: "Short Sleeve Shirt", season: "Summer")
-        let slacks = Clothing(imageName: "bottoms", type: "Bottoms", description: "Long Slacks", season: "Fall")
-        let skirt = Clothing(imageName: "bottoms", type: "Bottoms", description: "Skirt", season: "Spring")
-        let vest = Clothing(imageName: "jackets", type: "Jackets", description: "black vest", season: "Fall")
-        let raincoat = Clothing(imageName: "jackets", type: "Jackets", description: "yellow raincoat", season: "Spring")
-        let sneakers = Clothing(imageName: "shoes", type: "Shoes", description: "white sneakers", season: "Any")
-        let dressShoes = Clothing(imageName: "shoes", type: "Shoes", description: "black dress shoes", season: "Any")
-        clothing = [[longSleeveShirt, shortSleeveShirt], [slacks, skirt], [vest, raincoat], [sneakers, dressShoes]]
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = "My Closet"
+        title = "Clothing"
         view.backgroundColor = .white
         
-        viewLabel.text = "My Closet View"
-        viewLabel.textColor = .lightGray
-        viewLabel.translatesAutoresizingMaskIntoConstraints = false
-        viewLabel.font = .systemFont(ofSize: 20, weight: .semibold)
-        view.addSubview(viewLabel)
-
-//        let clothingLayout = UICollectionViewFlowLayout()
-//        clothingLayout.scrollDirection = .vertical
-//        clothingLayout.minimumLineSpacing = cellPadding
-//        clothingLayout.minimumInteritemSpacing = cellPadding
-//        clothingLayout.sectionInset = UIEdgeInsets(top: sectionPadding, left: 0, bottom: sectionPadding, right: 0)
-//
-//        clothingCollectionView = UICollectionView(frame: .zero , collectionViewLayout: clothingLayout)
-//        clothingCollectionView.backgroundColor = .clear
-//        clothingCollectionView.translatesAutoresizingMaskIntoConstraints = false
-//        clothingCollectionView.register(ClothingCollectionViewCell.self, forCellWithReuseIdentifier: clothingCellReuseIdentifier)
-//        clothingCollectionView.dataSource = self
-//        clothingCollectionView.delegate = self
-//        view.addSubview(clothingCollectionView)
-
-        setUpConstraints()
+        // Set up flow layout
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = cellPadding
+        layout.minimumInteritemSpacing = cellPadding
+        layout.sectionInset = UIEdgeInsets(top: sectionPadding, left: 0, bottom: sectionPadding, right: 0)
+    
+    
+        // Instantiate collectionview
+        clothingCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        clothingCollectionView.backgroundColor = .clear
+        clothingCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Create collection view cell and register it here.
+        clothingCollectionView.register(ClothingCollectionViewCell.self, forCellWithReuseIdentifier: clothingCellReuseIdentifier)
+        
+        // Set collection view data source
+        clothingCollectionView.dataSource = self
+        
+        // Set collection view delegate
+        clothingCollectionView.delegate = self
+        
+        // Register header view
+        clothingCollectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerReuseIdentifier)
+        
+        view.addSubview(clothingCollectionView)
+        setupConstraints()
     }
-//
-    func setUpConstraints(){
-//        let collectionViewPadding: CGFloat = 12
-//        NSLayoutConstraint.activate([
-//            clothingCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: collectionViewPadding),
-//            clothingCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: collectionViewPadding),
-//            clothingCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -collectionViewPadding),
-//            clothingCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -collectionViewPadding)
-//        ])
+    
+    func setupConstraints() {
+        let collectionViewPadding: CGFloat = 12
         NSLayoutConstraint.activate([
-            viewLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            viewLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            clothingCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: collectionViewPadding),
+            clothingCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: collectionViewPadding),
+            clothingCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -collectionViewPadding),
+            clothingCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -collectionViewPadding)
         ])
     }
 }
 
-//extension ClosetViewController: UICollectionViewDataSource{
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return sections.count
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = clothingCollectionView.dequeueReusableCell(withReuseIdentifier: clothingCellReuseIdentifier, for: indexPath) as! ClothingCollectionViewCell
-//        let clothing = clothing[indexPath.section][indexPath.item]
-//        cell.configure(for: clothing)
-//        return cell
-//    }
-//
-//}
-//extension ClosetViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate{
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let numsPerRow: CGFloat = 2.0
-//        let size = (collectionView.frame.width - cellPadding) / numsPerRow
-//        return CGSize(width: size, height: size)
-//    }
-//
-//}
+// Conform to UICollectionViewDataSource
+extension ClosetViewController: UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return sections.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return clothingItems[section].count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell =
+        collectionView.dequeueReusableCell(withReuseIdentifier: clothingCellReuseIdentifier, for: indexPath) as! ClothingCollectionViewCell
+        let clothing = clothingItems[indexPath.section][indexPath.item]
+        cell.configure(for: clothing)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header =
+        collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerReuseIdentifier, for: indexPath) as! HeaderView
+        let section = sections[indexPath.section]
+        header.configure(for: section)
+        return header
+    }
+}
+
+// Conform to UICollectionViewDelegateFlowLayout
+extension ClosetViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let numItemsPerRow: CGFloat = 2.0
+        let size = (collectionView.frame.width - cellPadding) / numItemsPerRow
+        return CGSize(width: size, height: size)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 50)
+    }
+    
+}
