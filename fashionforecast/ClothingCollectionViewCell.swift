@@ -13,7 +13,7 @@ class ClothingCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect){
         super.init(frame: frame)
         contentView.layer.cornerRadius = 8
-        contentView.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
+        contentView.layer.borderColor = CGColor(red: 166/255, green: 166/255, blue: 166/255, alpha: 1)
         contentView.layer.borderWidth = 3
         contentView.clipsToBounds = true
         
@@ -34,10 +34,10 @@ class ClothingCollectionViewCell: UICollectionViewCell {
     
     func setUpConstraints(){
         NSLayoutConstraint.activate([
-            clothingImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            clothingImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            clothingImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            clothingImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            clothingImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            clothingImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+            clothingImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            clothingImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10)
         ])
     }
     
